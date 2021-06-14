@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+  padding-bottom: 12px;
+}
+header img {
+  height: 28px;
+}
+
+/*# sourceMappingURL=style.css.map */
