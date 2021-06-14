@@ -1,0 +1,25 @@
+
+
+.field-search {
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding : 15px;
+    &__icon {
+        color: #353535;
+        margin-right: 18px;
+    }
+    &__text{
+        border: none;
+        background-color: #eaeaea;
+        font-weight: 700;
+        font-size: 1em;
+        width: 35%;
+        padding: 5px 0;
+        &::placeholder {
+            color: #353535;
+            opacity:1;
+        }
+    }
+}
