@@ -29,6 +29,12 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
 button {
   font-size: 1em;
   font-weight: 500;
@@ -136,6 +142,66 @@ header img {
 }
 .process-card p {
   font-weight: 700;
+}
+
+.section-restaurants {
+  background-color: #f6f6f6;
+  padding: 60px 21px;
+}
+
+.restaurants-allcards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurants-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 4px 5px 12px 2px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: relative;
+  margin: 9px 0;
+}
+.restaurants-card__img {
+  height: 175px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants-card__new {
+  position: absolute;
+  top: 15px;
+  left: 243px;
+  background-color: #99E2D0;
+  color: #008766;
+  height: 30px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 3px;
+}
+.restaurants-card__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.restaurants-card__text {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants-card__icon {
+  padding-right: 25px;
+  font-size: 1.5em;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
