@@ -29,6 +29,12 @@ h1, h2 {
   margin-bottom: 15px;
 }
 
+h3 {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
 button {
   font-size: 1em;
   font-weight: 500;
@@ -162,6 +168,7 @@ header img {
 }
 .restaurants-card__img {
   height: 175px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
 }
@@ -173,23 +180,28 @@ header img {
   color: #008766;
   height: 30px;
   width: 80px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8em;
   font-weight: 500;
+  border-radius: 3px;
 }
 .restaurants-card__info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
 }
 .restaurants-card__text {
   display: flex;
   flex-direction: column;
-  padding: 15px;
 }
 .restaurants-card__icon {
   padding-right: 25px;
+  font-size: 1.5em;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=style.css.map */
