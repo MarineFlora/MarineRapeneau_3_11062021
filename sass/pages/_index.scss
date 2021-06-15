@@ -117,7 +117,7 @@
     &__new {
         position: absolute;
         top: 15px;
-        left: 243px;
+        right: 15px;
         background-color: $color-tertiary;
         color: #008766; //faire darken....
         height: 30px;
@@ -133,7 +133,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         padding: 15px;
     }
     &__text {
@@ -141,8 +141,8 @@
         flex-direction: column;
     }
     &__icon {
-        padding-right: 25px;
-        font-size: 1.5em;
+        padding-right: 10px;
+        font-size: 1.7em;
         opacity: 0.5;
     }
 }

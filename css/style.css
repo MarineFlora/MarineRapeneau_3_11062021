@@ -41,6 +41,11 @@ h4 {
   padding-bottom: 15px;
 }
 
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
 button {
   font-size: 1em;
   font-weight: 500;
@@ -95,11 +100,6 @@ footer {
   display: inline-block;
   transform: rotate(-15deg);
   font-size: 0.65em;
-}
-
-.footer__email {
-  text-decoration: none;
-  color: inherit;
 }
 
 .field-search {
@@ -216,7 +216,7 @@ footer {
 .restaurants-card__new {
   position: absolute;
   top: 15px;
-  left: 243px;
+  right: 15px;
   background-color: #99E2D0;
   color: #008766;
   height: 30px;
@@ -232,7 +232,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 15px;
 }
 .restaurants-card__text {
@@ -240,8 +240,8 @@ footer {
   flex-direction: column;
 }
 .restaurants-card__icon {
-  padding-right: 25px;
-  font-size: 1.5em;
+  padding-right: 10px;
+  font-size: 1.7em;
   opacity: 0.5;
 }
 
