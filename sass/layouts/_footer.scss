@@ -1,0 +1,6 @@
+footer {
+    background-color: $dark-grey;
+    color: #fff;
+    padding: map-get($padding-top, footer) map-get($paddingsLR, footer) map-get($padding-bottom, footer) map-get($paddingsLR, footer);
+    
+}
