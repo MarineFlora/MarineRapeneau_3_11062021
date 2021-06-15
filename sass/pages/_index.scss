@@ -86,3 +86,60 @@
         font-weight: 700;
     }
 }
+
+.section-restaurants {
+    background-color: $light-grey;
+    padding: map-get($padding-top, restau) map-get($paddingsLR, process-restau) ;
+}
+
+.restaurants-allcards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.restaurants-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
+    width: 100%;
+    position: relative;
+    margin: 9px 0;
+    &__img {
+        height: 175px;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0,
+    }
+    &__new {
+        position: absolute;
+        top: 15px;
+        left: 243px;
+        background-color: $color-tertiary;
+        color: #008766; //faire darken....
+        height: 30px;
+        width: 80px;
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 500;
+    }
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+       
+        
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    &__icon {
+        padding-right: 25px;
+    }
+}
+
