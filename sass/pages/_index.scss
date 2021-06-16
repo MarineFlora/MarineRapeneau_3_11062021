@@ -41,6 +41,8 @@
     
 }
 
+// SECTION FONCTIONNEMENT
+
 .section-process {
     padding: map-get($padding-top, process) map-get($paddingsLR, process-restau) map-get($padding-bottom, process) map-get($paddingsLR, process-restau);
     
@@ -49,17 +51,26 @@
 .process-allcards {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 0 map-get($paddingsLR, process-card);
+    @include tablet-desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .process-card {
     background-color: $light-grey;
     border-radius: 20px;
     height: 72px;
+    width: 325px;
+    
     display: flex;
     align-items: center;
     margin: 12px 0;
     box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
+    position: relative;
     &:hover {
         background-color: #f5edff; // utiliser une fonction: eclaircir color primary ? + quand card hover : bg color change + icon color change
     }
@@ -72,7 +83,7 @@
         text-align: center;
         line-height: 25px;
         position: absolute;
-        left: 20px;
+        left: -10px;
         font-size: 0.9em;
         
     }
