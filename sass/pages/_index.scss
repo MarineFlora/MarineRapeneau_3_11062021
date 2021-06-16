@@ -45,6 +45,10 @@
 
 .section-process {
     padding: map-get($padding-top, process) map-get($paddingsLR, process-restau) map-get($padding-bottom, process) map-get($paddingsLR, process-restau);
+    @include desktop-only { // ça marche mais parce que bg blanc.....
+        max-width: 1280px;
+        margin: 0 auto;
+    }
     
 }
 
@@ -99,27 +103,44 @@
     }
 }
 
+// SECTION RESTAURANTS
+
 .section-restaurants {
     background-color: $light-grey;
     padding: map-get($padding-top, restau) map-get($paddingsLR, process-restau) ;
+
 }
+
+
 
 .restaurants-allcards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @include tablet-desktop {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .restaurants-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
     width: 100%;
+    @include tablet-desktop {
+        width: 335px;
+    }
+    @include desktop-only {
+        width: 500px;
+    }
     position: relative;
-    margin: 9px 0;
+    margin: 9px;
     &__img {
         height: 175px;
         width: 100%;
