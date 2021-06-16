@@ -144,6 +144,13 @@
         padding-right: 10px;
         font-size: 1.7em;
         opacity: 0.5;
+       /* TEST ANIMATIONS */ 
+       
+       &:hover {
+            transform: perspective(150px) translateZ(60px);
+        transition: transform 500ms ease-in-out;
+         /* TEST ANIMATIONS */ 
+        }
     }
 }
 

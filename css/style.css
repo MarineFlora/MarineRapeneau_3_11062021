@@ -46,7 +46,7 @@ h4 {
   color: inherit;
 }
 
-button {
+.btn {
   font-size: 1em;
   font-weight: 500;
   margin: 25px;
@@ -243,6 +243,12 @@ footer {
   padding-right: 10px;
   font-size: 1.7em;
   opacity: 0.5;
+  /* TEST ANIMATIONS */
+}
+.restaurants-card__icon:hover {
+  transform: perspective(150px) translateZ(60px);
+  transition: transform 500ms ease-in-out;
+  /* TEST ANIMATIONS */
 }
 
 /*# sourceMappingURL=style.css.map */
