@@ -1,6 +1,13 @@
-$paddingsLR: (process-restau:21px, process-card:10px, footer:25px);
+// MAPS
+
+$paddingsLR: (process:21px, restau: 21px, footer:25px);
 $padding-top: (process:50px, restau:60px, footer: 25px);
 $padding-bottom: (process:55px, restau: 60px, footer: 40px);
+
+$breakpoints: (tablet:750px, desktop:1200px);
+
+
+// VARIABLES COULEURS
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;

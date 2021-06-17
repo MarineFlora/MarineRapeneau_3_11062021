@@ -41,25 +41,49 @@
     
 }
 
+// SECTION FONCTIONNEMENT
+
 .section-process {
-    padding: map-get($padding-top, process) map-get($paddingsLR, process-restau) map-get($padding-bottom, process) map-get($paddingsLR, process-restau);
+    padding: map-get($padding-top, process) map-get($paddingsLR, process) map-get($padding-bottom, process) map-get($paddingsLR, process);
+   @include desktop-only { // pour pas utiliser margin auto... faire une maps...
+        padding-right: 100px;
+        padding-left: 100px;
+        
+    }
     
 }
 
 .process-allcards {
     display: flex;
     flex-direction: column;
-    padding: 0 map-get($paddingsLR, process-card);
+    align-items: center;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .process-card {
     background-color: $light-grey;
     border-radius: 20px;
     height: 72px;
+   width: 100%;
+   
+    @include tablet {
+       //width: 40%;
+       width: 40%;
+    }
+
+    @include desktop-only {
+        width: 30%;
+        
+    }
     display: flex;
     align-items: center;
-    margin: 12px 0;
+    margin: 12px;
     box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
+    position: relative;
     &:hover {
         background-color: #f5edff; // utiliser une fonction: eclaircir color primary ? + quand card hover : bg color change + icon color change
     }
@@ -72,7 +96,7 @@
         text-align: center;
         line-height: 25px;
         position: absolute;
-        left: 20px;
+        left: -10px;
         font-size: 0.9em;
         
     }
@@ -87,25 +111,64 @@
     }
 }
 
+// SECTION RESTAURANTS
+
 .section-restaurants {
     background-color: $light-grey;
-    padding: map-get($padding-top, restau) map-get($paddingsLR, process-restau) ;
+   padding: map-get($padding-top, restau) map-get($paddingsLR, restau) ;
+    
+    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
+        padding-right: 100px;
+        padding-left: 100px;
+        
+    }
+    
 }
+
+/*.restaurants-container {/*
+   
+    @include desktop-only {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}*/
+
+
 
 .restaurants-allcards {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @include desktop-only {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 .restaurants-card {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
-    width: 100%;
+    flex:auto;
+    @include desktop-only { // à ameliorer....
+        flex:auto;
+      flex: 44%;
+      //  max-width: 500px;
+      margin: 9px;
+    }
+   /* @include desktop-only {
+     
+        max-width: 500px;
+        
+    }*/
     position: relative;
     margin: 9px 0;
     &__img {
