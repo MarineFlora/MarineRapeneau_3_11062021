@@ -2,6 +2,11 @@ footer {
     background-color: $dark-grey;
     color: #fff;
     padding: map-get($padding-top, footer) map-get($paddingsLR, footer) map-get($padding-bottom, footer) map-get($paddingsLR, footer);
+    @include desktop-only { // ça marche mais parce que bg blanc.....
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+    
     
 }
 

@@ -44,10 +44,11 @@
 // SECTION FONCTIONNEMENT
 
 .section-process {
-    padding: map-get($padding-top, process) map-get($paddingsLR, process-restau) map-get($padding-bottom, process) map-get($paddingsLR, process-restau);
-    @include desktop-only { // ça marche mais parce que bg blanc.....
-        max-width: 1280px;
-        margin: 0 auto;
+    padding: map-get($padding-top, process) map-get($paddingsLR, process) map-get($padding-bottom, process) map-get($paddingsLR, process);
+    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
+        padding-right: 200px;
+        padding-left: 200px;
+        
     }
     
 }
@@ -58,7 +59,7 @@
     align-items: center;
     @include tablet-desktop {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
     }
 }
@@ -107,12 +108,28 @@
 
 .section-restaurants {
     background-color: $light-grey;
-    padding: map-get($padding-top, restau) map-get($paddingsLR, process-restau) ;
-
+   padding: map-get($padding-top, restau) map-get($paddingsLR, restau) ;
+    @include tablet-desktop {
+       
+    }
+    @include desktop-only { //  à ajouter aux autres
+        padding-right: 200px;
+        padding-left: 200px;
+    }
+    
 }
 
-.restaurants-container { /// i am still here
-}
+/*.restaurants-container {/*
+   
+    @include desktop-only {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}*/
+
 
 
 .restaurants-allcards {
@@ -122,7 +139,7 @@
     
     @include tablet-desktop {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
     }
 }
@@ -134,15 +151,20 @@
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
-    width: 100%;
-    @include tablet-desktop {
-        width: 335px;
+    flex:auto;
+    @include tablet-desktop { // à ameliorer....
+        flex:auto;
+      flex: 44%;
+      //  max-width: 500px;
+      margin: 9px;
     }
     @include desktop-only {
-        width: 500px;
+     
+        max-width: 500px;
+        
     }
     position: relative;
-    margin: 9px;
+    margin: 9px 0;
     &__img {
         height: 175px;
         width: 100%;
