@@ -20,10 +20,15 @@ time, mark, audio, video {
 }
 
 body {
-  font-family: "roboto", sans-serif;
+  max-width: 1600px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  font-family: "roboto", sans-serif;
 }
 
 h1, h2 {
@@ -80,10 +85,10 @@ footer {
   color: #fff;
   padding: 25px 25px 40px 25px;
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   footer {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 
@@ -92,10 +97,21 @@ footer {
   font-weight: 300;
   font-size: 0.9em;
 }
+@media all and (min-width: 750px) {
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .footer-links__element {
   padding: 4px 0;
   display: flex;
   align-items: center;
+}
+@media all and (min-width: 750px) {
+  .footer-links__element {
+    margin-right: 90px;
+  }
 }
 .footer-links__element--bold {
   font-weight: 400;
@@ -155,10 +171,10 @@ footer {
 .section-process {
   padding: 50px 21px 55px 21px;
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .section-process {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 
@@ -167,10 +183,10 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-@media all and (min-width: 760px) {
+@media all and (min-width: 750px) {
   .process-allcards {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 }
@@ -186,9 +202,14 @@ footer {
   box-shadow: 4px 5px 12px 2px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-@media all and (min-width: 760px) {
+@media all and (min-width: 750px) {
   .process-card {
-    width: 325px;
+    width: 40%;
+  }
+}
+@media all and (min-width: 1200px) {
+  .process-card {
+    width: 30%;
   }
 }
 .process-card:hover {
@@ -218,10 +239,10 @@ footer {
   background-color: #f6f6f6;
   padding: 60px 21px;
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .section-restaurants {
-    padding-right: 200px;
-    padding-left: 200px;
+    padding-right: 100px;
+    padding-left: 100px;
   }
 }
 
@@ -240,7 +261,7 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-@media all and (min-width: 760px) {
+@media all and (min-width: 1200px) {
   .restaurants-allcards {
     flex-direction: row;
     justify-content: center;
@@ -256,19 +277,19 @@ footer {
   border-radius: 20px;
   box-shadow: 4px 5px 12px 2px rgba(0, 0, 0, 0.1);
   flex: auto;
+  /* @include desktop-only {
+
+       max-width: 500px;
+
+   }*/
   position: relative;
   margin: 9px 0;
 }
-@media all and (min-width: 760px) {
+@media all and (min-width: 1200px) {
   .restaurants-card {
     flex: auto;
     flex: 44%;
     margin: 9px;
-  }
-}
-@media all and (min-width: 1100px) {
-  .restaurants-card {
-    max-width: 500px;
   }
 }
 .restaurants-card__img {
