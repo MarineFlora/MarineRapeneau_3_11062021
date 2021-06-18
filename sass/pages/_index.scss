@@ -1,4 +1,4 @@
-.field-search {
+.search-section {
     background-color: $mid-grey;
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@
     }
 }
 
-.website-info {
+.website-intro {
     background-color: $light-grey;
     display: flex;
     flex-direction: column;
@@ -43,8 +43,8 @@
 
 // SECTION FONCTIONNEMENT
 
-.section-process {
-    padding: map-get($padding-top, process) map-get($paddingsLR, process) map-get($padding-bottom, process) map-get($paddingsLR, process);
+.website-features {
+    padding: map-get($padding-top, feature) map-get($paddingsLR, feature) map-get($padding-bottom, feature) map-get($paddingsLR, feature);
    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
         padding-right: 100px;
         padding-left: 100px;
@@ -53,7 +53,7 @@
     
 }
 
-.process-allcards {
+.features-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@
     }
 }
 
-.process-card {
+.feature-card {
     background-color: $light-grey;
     border-radius: 20px;
     height: 72px;
@@ -138,7 +138,7 @@
 
 
 
-.restaurants-allcards {
+.restaurants-list {
     display: flex;
     flex-direction: column;
     align-items: center;
