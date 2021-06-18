@@ -1,6 +1,8 @@
 footer {
     background-color: $dark-grey;
-    color: #fff;
+   color: lighten($dark-grey, 80%); // donne du white au css
+   // color: #fff;
+   // test @include text-color;
     padding: 25px 25px 40px;
     @include desktop-only { 
        @include padding-desktop;

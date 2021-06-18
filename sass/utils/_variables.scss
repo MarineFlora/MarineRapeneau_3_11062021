@@ -10,9 +10,12 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-$dark-grey : #353535;
-$mid-grey: #eaeaea;
-$light-grey: #f6f6f6;
+$dark-grey: lighten(black, 20%);
+$mid-grey: lighten(black, 90%);
+$light-grey: lighten(black, 95%);
+
+
+$color-black: #000000;
 
 
 

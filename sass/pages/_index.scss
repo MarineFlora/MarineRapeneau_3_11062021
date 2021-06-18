@@ -79,7 +79,10 @@
             width: 30%;  
         }
         &:hover {
-            background-color: #f5edff; // utiliser une fonction: eclaircir color primary ou anim opacity? ? + quand card hover : bg color change + icon color change
+            background-color: lighten($color-primary, 35%); // ou anim opacity? car pas naimer bg noramlement? + quand card hover : bg color change + icon color change
+            .feature-card__icon {
+                color: $color-primary;
+            }
         }
         &__nbr{
             height: 25px;
@@ -94,7 +97,7 @@
             font-size: 0.9em;
         }
         &__icon {
-            color: #7e7e7e;
+            color: darken($light-grey, 50%);
             margin: 0 20px 0 35px;  
         }
         p {
@@ -153,7 +156,7 @@
         top: 15px;
         right: 15px;
         background-color: $color-tertiary;
-        color: #008766; //faire darken....
+        color: darken($color-tertiary, 40%);
         height: 30px;
         width: 80px;
         display: flex;

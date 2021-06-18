@@ -16,3 +16,11 @@
     padding-right: $padding;
 }
 
+/* test...... moyennement concluant @mixin text-color($bg-color:$dark-grey){ // ça fonctionne!!!!!!!!!! mouais....
+    @if (lightness($bg-color) < 22% ){
+        $bg-color: lighten($bg-color, 85%);
+    }@else {
+        $bg-color: darken($bg-color, 80%);
+    }
+    color: $bg-color;
+}*/

@@ -1,3 +1,12 @@
+@charset "UTF-8";
+/* test...... moyennement concluant @mixin text-color($bg-color:$dark-grey){ // ça fonctionne!!!!!!!!!! mouais....
+    @if (lightness($bg-color) < 22% ){
+        $bg-color: lighten($bg-color, 85%);
+    }@else {
+        $bg-color: darken($bg-color, 80%);
+    }
+    color: $bg-color;
+}*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +63,9 @@ h4 {
   color: inherit;
 }
 
+/* test mixin h1, h2, h3, p {
+    @include text-color;
+}*/
 .btn {
   font-size: 1em;
   font-weight: 500;
@@ -80,8 +92,8 @@ header img {
 }
 
 footer {
-  background-color: #353535;
-  color: #fff;
+  background-color: #333333;
+  color: white;
   padding: 25px 25px 40px;
 }
 @media all and (min-width: 1200px) {
@@ -127,32 +139,32 @@ footer {
 }
 
 .search-section {
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
   display: flex;
   justify-content: center;
   align-items: baseline;
   padding: 10px;
 }
 .search-section__icon {
-  color: #353535;
+  color: #333333;
   margin-right: 15px;
 }
 .search-section__text {
   border: none;
-  background-color: #eaeaea;
+  background-color: #e6e6e6;
   font-weight: 700;
   font-size: 1em;
   width: 130px;
   height: 30px;
 }
 .search-section__text::placeholder {
-  color: #353535;
+  color: #333333;
   opacity: 1;
   padding-left: 5px;
 }
 
 .website-intro {
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,7 +202,7 @@ footer {
   }
 }
 .features-list .feature-card {
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
   border-radius: 20px;
   height: 72px;
   width: 100%;
@@ -211,7 +223,10 @@ footer {
   }
 }
 .features-list .feature-card:hover {
-  background-color: #f5edff;
+  background-color: #f2eafb;
+}
+.features-list .feature-card:hover .feature-card__icon {
+  color: #9356DC;
 }
 .features-list .feature-card__nbr {
   height: 25px;
@@ -226,7 +241,7 @@ footer {
   font-size: 0.9em;
 }
 .features-list .feature-card__icon {
-  color: #7e7e7e;
+  color: #737373;
   margin: 0 20px 0 35px;
 }
 .features-list .feature-card p {
@@ -234,7 +249,7 @@ footer {
 }
 
 .section-restaurants {
-  background-color: #f6f6f6;
+  background-color: #f2f2f2;
   padding: 55px 21px;
 }
 @media all and (min-width: 1200px) {
@@ -286,7 +301,7 @@ footer {
   top: 15px;
   right: 15px;
   background-color: #99E2D0;
-  color: #008766;
+  color: #278870;
   height: 30px;
   width: 80px;
   display: flex;
