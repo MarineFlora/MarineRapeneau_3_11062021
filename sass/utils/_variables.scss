@@ -1,14 +1,11 @@
-// MAPS
+// PADDINGS
+$padding-feature-restau: (vertical:55px, horizontal:21px);
+$padding-desktop: 100px;
 
-$paddingsLR: (feature:21px, restau: 21px, footer:25px);
-$padding-top: (feature:50px, restau:60px, footer: 25px);
-$padding-bottom: (feature:55px, restau: 60px, footer: 40px);
-
+// RESPONSIVE
 $breakpoints: (tablet:750px, desktop:1200px);
 
-
 // VARIABLES COULEURS
-
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
@@ -16,4 +13,6 @@ $color-tertiary: #99E2D0;
 $dark-grey : #353535;
 $mid-grey: #eaeaea;
 $light-grey: #f6f6f6;
+
+
 

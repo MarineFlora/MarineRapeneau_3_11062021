@@ -1,4 +1,4 @@
-@mixin tablet { //nom pas bon???
+@mixin tablet { 
     @media all and (min-width: map-get($breakpoints, tablet)){
         @content;
     }
@@ -9,3 +9,10 @@
         @content;
     }
 }
+
+
+@mixin padding-desktop($padding: $padding-desktop){ 
+    padding-left: $padding;
+    padding-right: $padding;
+}
+

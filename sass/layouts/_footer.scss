@@ -1,10 +1,9 @@
 footer {
     background-color: $dark-grey;
     color: #fff;
-    padding: map-get($padding-top, footer) map-get($paddingsLR, footer) map-get($padding-bottom, footer) map-get($paddingsLR, footer);
-    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
-        padding-right: 100px;
-        padding-left: 100px;
+    padding: 25px 25px 40px;
+    @include desktop-only { 
+       @include padding-desktop;
     }
 }
 

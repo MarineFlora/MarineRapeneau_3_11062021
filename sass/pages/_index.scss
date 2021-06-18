@@ -46,10 +46,9 @@
 // SECTION FONCTIONNEMENT
 
 .website-features {
-    padding: map-get($padding-top, feature) map-get($paddingsLR, feature) map-get($padding-bottom, feature) map-get($paddingsLR, feature);
-   @include desktop-only { // pour pas utiliser margin auto... faire une maps...
-        padding-right: 100px;
-        padding-left: 100px;
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+      @include padding-desktop;
     }
 }
 
@@ -77,10 +76,10 @@
             width: 40%;
         }
         @include desktop-only {
-                width: 30%;  
+            width: 30%;  
         }
         &:hover {
-            background-color: #f5edff; // utiliser une fonction: eclaircir color primary ? + quand card hover : bg color change + icon color change
+            background-color: #f5edff; // utiliser une fonction: eclaircir color primary ou anim opacity? ? + quand card hover : bg color change + icon color change
         }
         &__nbr{
             height: 25px;
@@ -110,10 +109,9 @@
 
 .section-restaurants {
     background-color: $light-grey;
-    padding: map-get($padding-top, restau) map-get($paddingsLR, restau);
-    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
-        padding-right: 100px;
-        padding-left: 100px;
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+        @include padding-desktop;
     }
 }
 
@@ -141,8 +139,8 @@
     margin: 9px 0;
     @include desktop-only { // à ameliorer....
         flex:auto;
-      flex: 44%;
-      margin: 9px;
+        flex: 44%;
+        margin: 9px;
     }
     &__img {
         height: 175px;
