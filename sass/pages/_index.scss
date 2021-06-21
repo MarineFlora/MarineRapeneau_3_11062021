@@ -1,5 +1,4 @@
 // SECTION SEARCH
-
 .search-section {
     @include flex-align(baseline){
         justify-content: center;
@@ -13,8 +12,8 @@
     &__text{
         background-color: $mid-grey;
         border: none;
-        font-weight: 700; //typography ?
-        font-size: 1em; // typography ?
+        font-weight: 700;
+        font-size: 1em;
         width: 130px;
         height: 30px;
         &::placeholder {
@@ -26,7 +25,6 @@
 }
 
 // SECTION INTRO
-
 .website-intro {
     background-color: $light-grey;
     padding: 30px 40px;
@@ -38,7 +36,6 @@
 }
 
 // SECTION FONCTIONNEMENT
-
 .website-features {
     padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
     @include desktop-only { 
@@ -54,9 +51,7 @@
         @include flex-row-wrap {
             justify-content: space-around;
         }
-    
     }
-
     .feature-card {
         @include flex-align(center);
         @include layout-cards;
@@ -94,14 +89,13 @@
             margin: 0 20px 0 35px;  
         }
         p {
-            font-weight: 700; // typography ?
+            font-weight: 700;
         }
     }
 }
 
 
 // SECTION RESTAURANTS
-
 .section-restaurants {
     background-color: $light-grey;
     padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);

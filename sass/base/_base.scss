@@ -21,10 +21,10 @@ time, mark, audio, video {
 
 body {	
 	max-width: 1600px;
-	margin :  auto;
-	display: flex;
-    justify-content: center;
-    align-items: center;
+	margin: auto;
+	@include flex-align(center){
+		justify-content: center;
+	}
 }
 
 
