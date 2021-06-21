@@ -8,6 +8,6 @@
     background: linear-gradient(170deg, $color-secondary, $color-primary);
     color: #fff;
     padding: 0 20px;
-    box-shadow: 0px 4px 7px 1px rgb(0 0 0 / 20%);
+    box-shadow: $box-shadow;
     cursor: pointer;
     }
