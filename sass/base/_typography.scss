@@ -2,6 +2,10 @@ body {
     font-family: 'roboto', sans-serif;
 }
 
+h1 {
+    margin: 7px;
+}
+
 h1, h2 {
     font-size: 1.5em;
     font-weight: 900;
@@ -25,6 +29,3 @@ h4 {
     color: inherit;
 }
 
-/* test mixin h1, h2, h3, p {
-    @include text-color;
-}*/

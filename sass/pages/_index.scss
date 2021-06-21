@@ -1,20 +1,20 @@
 // SECTION SEARCH
 
 .search-section {
+    @include flex-align(baseline){
+        justify-content: center;
+    }
     background-color: $mid-grey;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
     padding : 10px;
     &__icon {
         color: $dark-grey;
         margin-right: 15px;
     }
     &__text{
-      border: none;
         background-color: $mid-grey;
-        font-weight: 700;
-        font-size: 1em;
+        border: none;
+        font-weight: 700; //typography ?
+        font-size: 1em; // typography ?
         width: 130px;
         height: 30px;
         &::placeholder {
@@ -29,16 +29,10 @@
 
 .website-intro {
     background-color: $light-grey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 40px;
     text-align: center;
-    &__heading {
-        margin: 7px;
-    }
     &__text {
-        font-weight: 300;
+        font-weight: 300; // devrait se situer dans typography?
         margin: 7px;
     } 
 }
@@ -53,24 +47,23 @@
 }
 
 .features-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-lists {
+        align-items: center; 
+    }
     @include tablet {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        @include flex-row-wrap {
+            justify-content: space-around;
+        }
+    
     }
 
     .feature-card {
+        @include flex-align(center);
+        @include layout-cards;
         background-color: $light-grey;
-        border-radius: 20px;
         height: 72px;
         width: 100%;
-        display: flex;
-        align-items: center;
         margin: 12px;
-        box-shadow: $box-shadow;
         position: relative;
         @include tablet {
             width: 40%;
@@ -101,11 +94,10 @@
             margin: 0 20px 0 35px;  
         }
         p {
-            font-weight: 700;
+            font-weight: 700; // typography ?
         }
     }
 }
-
 
 
 // SECTION RESTAURANTS
@@ -119,28 +111,19 @@
 }
 
 .restaurants-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+    @include flex-lists;
     @include desktop-only {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        @include flex-row-wrap 
     }
 }
 
 .restaurants-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include layout-cards;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: $box-shadow;
     flex:auto;
     position: relative;
     margin: 9px 0;
-    @include desktop-only { // à ameliorer....
+    @include desktop-only { 
         flex:auto;
         flex: 44%;
         margin: 9px;
@@ -159,23 +142,17 @@
         color: darken($color-tertiary, 40%);
         height: 30px;
         width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-align(center){
+            justify-content: center;
+        }
         font-size: 0.8em;
         font-weight: 500;
         border-radius: 3px;
     }
     &__info {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
         padding: 15px;
-    }
-    &__text {
-        display: flex;
-        flex-direction: column;
     }
     &__icon { // a faire passer dans component ?
         padding-right: 10px;

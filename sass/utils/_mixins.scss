@@ -1,3 +1,4 @@
+// MIXINS RESPONSIVE
 @mixin tablet { 
     @media all and (min-width: map-get($breakpoints, tablet)){
         @content;
@@ -10,17 +11,38 @@
     }
 }
 
-
+// MIXINS PADDINGS DESKTOP
 @mixin padding-desktop($padding: $padding-desktop){ 
     padding-left: $padding;
     padding-right: $padding;
 }
 
-/* test...... moyennement concluant @mixin text-color($bg-color:$dark-grey){ // ça fonctionne!!!!!!!!!! mouais....
-    @if (lightness($bg-color) < 22% ){
-        $bg-color: lighten($bg-color, 85%);
-    }@else {
-        $bg-color: darken($bg-color, 80%);
-    }
-    color: $bg-color;
-}*/
+//MIXINS BOX CARDS
+@mixin layout-cards {
+    border-radius: $border-radius-cards; 
+    box-shadow: $box-shadow;
+}
+
+// MIXINS POUR PROPRIETES FLEXBOX
+@mixin flex-row-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    @content
+}
+
+@mixin flex-lists {
+    display: flex;
+    flex-direction: column;
+    @content
+}
+
+@mixin flex-align($align) {
+    display: flex;
+    align-items: $align;
+    @content
+}
+
+
+
+
