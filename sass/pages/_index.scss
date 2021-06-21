@@ -1,17 +1,17 @@
-.field-search {
+// SECTION SEARCH
+.search-section {
+    @include flex-align(baseline){
+        justify-content: center;
+    }
     background-color: $mid-grey;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
     padding : 10px;
-    
     &__icon {
         color: $dark-grey;
         margin-right: 15px;
     }
     &__text{
-      border: none;
         background-color: $mid-grey;
+        border: none;
         font-weight: 700;
         font-size: 1em;
         width: 130px;
@@ -24,153 +24,104 @@
     }
 }
 
-.website-info {
+// SECTION INTRO
+.website-intro {
     background-color: $light-grey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 40px;
     text-align: center;
-    &__heading {
-        margin: 7px;
-    }
     &__text {
-        font-weight: 300;
+        font-weight: 300; // devrait se situer dans typography?
         margin: 7px;
-    }
-    
+    } 
 }
 
 // SECTION FONCTIONNEMENT
-
-.section-process {
-    padding: map-get($padding-top, process) map-get($paddingsLR, process) map-get($padding-bottom, process) map-get($paddingsLR, process);
-   @include desktop-only { // pour pas utiliser margin auto... faire une maps...
-        padding-right: 100px;
-        padding-left: 100px;
-        
+.website-features {
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+      @include padding-desktop;
     }
-    
 }
 
-.process-allcards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.features-list {
+    @include flex-lists {
+        align-items: center; 
+    }
     @include tablet {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        @include flex-row-wrap {
+            justify-content: space-around;
+        }
+    }
+    .feature-card {
+        @include flex-align(center);
+        @include layout-cards;
+        background-color: $light-grey;
+        height: 72px;
+        width: 100%;
+        margin: 12px;
+        position: relative;
+        @include tablet {
+            width: 40%;
+        }
+        @include desktop-only {
+            width: 30%;  
+        }
+        &:hover {
+            background-color: lighten($color-primary, 35%); // ou anim opacity? car pas naimer bg noramlement? + quand card hover : bg color change + icon color change
+            .feature-card__icon {
+                color: $color-primary;
+            }
+        }
+        &__nbr{
+            height: 25px;
+            width: 25px;
+            background-color: $color-primary;
+            border-radius: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left: -10px;
+            font-size: 0.9em;
+        }
+        &__icon {
+            color: darken($light-grey, 50%);
+            margin: 0 20px 0 35px;  
+        }
+        p {
+            font-weight: 700;
+        }
     }
 }
 
-.process-card {
-    background-color: $light-grey;
-    border-radius: 20px;
-    height: 72px;
-   width: 100%;
-   
-    @include tablet {
-       //width: 40%;
-       width: 40%;
-    }
-
-    @include desktop-only {
-        width: 30%;
-        
-    }
-    display: flex;
-    align-items: center;
-    margin: 12px;
-    box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
-    position: relative;
-    &:hover {
-        background-color: #f5edff; // utiliser une fonction: eclaircir color primary ? + quand card hover : bg color change + icon color change
-    }
-    &__nbr{
-        height: 25px;
-        width: 25px;
-        background-color: $color-primary;
-        border-radius: 40px;
-        color: #fff;
-        text-align: center;
-        line-height: 25px;
-        position: absolute;
-        left: -10px;
-        font-size: 0.9em;
-        
-    }
-    &__icon {
-        color: #7e7e7e;
-        margin: 0 20px 0 35px;
-        
-    }
-
-    p {
-        font-weight: 700;
-    }
-}
 
 // SECTION RESTAURANTS
-
 .section-restaurants {
     background-color: $light-grey;
-   padding: map-get($padding-top, restau) map-get($paddingsLR, restau) ;
-    
-    @include desktop-only { // pour pas utiliser margin auto... faire une maps...
-        padding-right: 100px;
-        padding-left: 100px;
-        
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+        @include padding-desktop;
     }
-    
 }
 
-/*.restaurants-container {/*
-   
+.restaurants-list {
+    @include flex-lists;
     @include desktop-only {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-}*/
-
-
-
-.restaurants-allcards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-    @include desktop-only {
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
+        @include flex-row-wrap 
     }
 }
 
 .restaurants-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include layout-cards;
     background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 4px 5px 12px 2px rgb(0 0 0 / 10%);
     flex:auto;
-    @include desktop-only { // à ameliorer....
-        flex:auto;
-      flex: 44%;
-      //  max-width: 500px;
-      margin: 9px;
-    }
-   /* @include desktop-only {
-     
-        max-width: 500px;
-        
-    }*/
     position: relative;
     margin: 9px 0;
+    @include desktop-only { 
+        flex:auto;
+        flex: 44%;
+        margin: 9px;
+    }
     &__img {
         height: 175px;
         width: 100%;
@@ -182,33 +133,26 @@
         top: 15px;
         right: 15px;
         background-color: $color-tertiary;
-        color: #008766; //faire darken....
+        color: darken($color-tertiary, 40%);
         height: 30px;
         width: 80px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-align(center){
+            justify-content: center;
+        }
         font-size: 0.8em;
         font-weight: 500;
         border-radius: 3px;
     }
     &__info {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-start;
         padding: 15px;
     }
-    &__text {
-        display: flex;
-        flex-direction: column;
-    }
-    &__icon {
+    &__icon { // a faire passer dans component ?
         padding-right: 10px;
         font-size: 1.7em;
         opacity: 0.5;
        /* TEST ANIMATIONS */ 
-       
        &:hover {
             transform: perspective(150px) translateZ(60px);
         transition: transform 500ms ease-in-out;
