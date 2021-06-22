@@ -17,10 +17,14 @@
     padding-right: $padding;
 }
 
-//MIXINS BOX CARDS
+//MIXINS BOX
+@mixin box-shadow($percent) {
+    box-shadow: 0px 4px 7px 1px rgb(0, 0, 0, $percent);
+}
+
 @mixin layout-cards {
     border-radius: $border-radius-cards; 
-    box-shadow: $box-shadow;
+    @include box-shadow(0.1);
 }
 
 // MIXINS POUR PROPRIETES FLEXBOX
@@ -42,6 +46,7 @@
     align-items: $align;
     @content
 }
+
 
 
 
