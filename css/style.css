@@ -363,5 +363,9 @@ footer {
         transform: scaleY(1);
     }
 }*/
+.photo-restau {
+  width: 100%;
+  object-fit: cover;
+}
 
 /*# sourceMappingURL=style.css.map */
