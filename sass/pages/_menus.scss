@@ -10,14 +10,19 @@
     margin-top: -50px;
     width: 100%;
     position: relative;
-    padding-bottom: map-get($padding-feature-restau, vertical);
+    
+  .btn {
+      max-width: 185px;
+      // je n'arrive pas à centrer
+  }
+  
 }
 
 .menu-heading {
     @include flex-align(center) {
         justify-content: space-between;
     }
-    padding: 25px 18px 15px 18px;
+    padding: 25px 25px 15px 18px;
     &__title {
         font-family: 'Shrikhand', cursive;
         font-size: 1.8em;
@@ -26,17 +31,34 @@
 }
 
 .menu-content {
-    padding-bottom: 35px;
+    padding: 0 15px 35px 15px;
     &__heading {
         font-size: 1.1em;
         text-transform: uppercase;
         font-weight: 400;
         margin-bottom: 5px;
+        margin-left: 5px;
     }
     &__bottombar {
         width: 40px;
         height: 3px;
         background-color: $color-tertiary;
-        margin-bottom: 10px;   
+        margin-bottom: 15px;   
+        margin-left: 5px;
     }
 }
+
+.menu-card { // a amélioer, répétitions
+    @include layout-cards;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+  position: relative;
+    margin: 15px 0;// comment restaurant card info 
+    &__price {
+        font-weight: 700;
+    }
+}
+
