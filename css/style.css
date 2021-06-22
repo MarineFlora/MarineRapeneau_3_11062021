@@ -69,7 +69,26 @@ h4 {
   color: #fff;
   padding: 0 20px;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.1);
+  position: relative;
   cursor: pointer;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background: linear-gradient(170deg, #ff93e1 0%, #a16be0 100%);
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 
 header {
@@ -199,6 +218,7 @@ footer {
   width: 100%;
   margin: 12px;
   position: relative;
+  z-index: 1;
 }
 @media all and (min-width: 750px) {
   .features-list .feature-card {
@@ -210,11 +230,25 @@ footer {
     width: 30%;
   }
 }
-.features-list .feature-card:hover {
-  background-color: #f2eafb;
+.features-list .feature-card:hover::after {
+  opacity: 1;
 }
 .features-list .feature-card:hover .feature-card__icon {
   color: #9356DC;
+}
+.features-list .feature-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 20px;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.1);
+  background-color: #f2eafb;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 500ms;
 }
 .features-list .feature-card__nbr {
   height: 25px;
@@ -288,6 +322,7 @@ footer {
   color: #278870;
   height: 30px;
   width: 80px;
+  box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -303,13 +338,30 @@ footer {
 .restaurants-card__icon {
   padding-right: 10px;
   font-size: 1.7em;
-  opacity: 0.5;
+  /* TEST ANIMATIONS */
   /* TEST ANIMATIONS */
 }
-.restaurants-card__icon:hover {
-  transform: perspective(150px) translateZ(60px);
-  transition: transform 500ms ease-in-out;
-  /* TEST ANIMATIONS */
-}
+
+/*
+@keyframes progress-bar {
+    0% {
+        transform: scaleY(0);
+    }
+    15% {
+        transform: scaleY(.7);
+    }
+    30% {
+        transform: scaleY(.28);
+    }
+    50% {
+        transform: scaleY(.63);
+    }
+    85% {
+        opacity:1;
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}*/
 
 /*# sourceMappingURL=style.css.map */

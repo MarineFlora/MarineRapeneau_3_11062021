@@ -8,6 +8,28 @@
     background: linear-gradient(170deg, $color-secondary, $color-primary);
     color: #fff;
     padding: 0 20px;
-    box-shadow: $box-shadow;
+    @include box-shadow(0.1);
+    position: relative;
     cursor: pointer;
+    z-index: 1;
+    &:hover {
+        &::after {
+            opacity:1;
+        }
+}
+    &::after { 
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 30px;
+        background: linear-gradient(170deg, lighten($color-secondary,5) 0%, lighten($color-primary,5) 100%);
+        @include box-shadow(0.3);
+        opacity:0;
+        z-index: -1;
+        transition: opacity 500ms;
     }
+    
+}
