@@ -30,6 +30,9 @@
     @include tablet {
         justify-content: space-evenly;
     }
+    @include desktop-only {
+        justify-content: center;
+    }
     &__title {
         font-family: 'Shrikhand', cursive;
         font-size: 1.6em;
@@ -70,7 +73,7 @@
     position: relative;
     margin: 15px 0;// comment restaurant card info 
     @include tablet {
-        width: 280px; }
+        width: 300px; }
     @include desktop-only {
         width: 350px;
     }

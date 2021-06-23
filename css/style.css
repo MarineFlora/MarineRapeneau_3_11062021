@@ -96,7 +96,7 @@ h4 {
 }
 
 .heart-icon {
-  padding-right: 10px;
+  padding: 10px;
   font-size: 1.7em;
 }
 
@@ -163,7 +163,7 @@ footer {
   font-weight: 300;
   font-size: 0.9em;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .footer-links {
     display: flex;
     flex-direction: row;
@@ -180,7 +180,7 @@ footer {
   flex-wrap: unset;
   padding: 4px 0;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .footer-links__element {
     flex: auto;
   }
@@ -253,7 +253,7 @@ footer {
   align-items: center;
   flex-wrap: unset;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .features-list {
     display: flex;
     flex-direction: row;
@@ -277,7 +277,7 @@ footer {
   position: relative;
   z-index: 1;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .features-list .feature-card {
     width: 40%;
   }
@@ -325,6 +325,7 @@ footer {
 }
 .features-list .feature-card p {
   font-weight: 700;
+  margin: 0 5px;
 }
 
 .section-restaurants {
@@ -440,9 +441,14 @@ footer {
   flex-wrap: unset;
   padding: 25px 25px 15px 18px;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .menu-heading {
     justify-content: space-evenly;
+  }
+}
+@media all and (min-width: 1200px) {
+  .menu-heading {
+    justify-content: center;
   }
 }
 .menu-heading__title {
@@ -451,7 +457,7 @@ footer {
   letter-spacing: 1px;
 }
 
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .menu-list {
     display: flex;
     flex-direction: row;
@@ -492,9 +498,9 @@ footer {
   position: relative;
   margin: 15px 0;
 }
-@media all and (min-width: 750px) {
+@media all and (min-width: 760px) {
   .menu-card {
-    width: 280px;
+    width: 300px;
   }
 }
 @media all and (min-width: 1200px) {
