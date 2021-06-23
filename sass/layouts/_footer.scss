@@ -1,6 +1,6 @@
 footer {
     background-color: $dark-grey;
-   color: lighten($dark-grey, 80%);
+    color: lighten($dark-grey, 80%);
     padding: 25px 25px 40px;
     @include desktop-only { 
        @include padding-desktop;
@@ -12,10 +12,10 @@ footer {
     font-weight: 300;
     font-size: 0.9em;
     @include tablet {
-        @include flex-row-wrap;
+        @include flexbox(row, unset, unset, wrap);
     }
     &__element{
-        @include flex-align(center);
+        @include flexbox(row, unset, center,unset);
         padding: 4px 0;
         @include tablet {
             flex: auto;
@@ -25,6 +25,7 @@ footer {
         }
     }
 }
+
 
 .footer__icon {
     font-size: 0.8em;

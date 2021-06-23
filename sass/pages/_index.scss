@@ -1,8 +1,6 @@
 // SECTION SEARCH
 .search-section {
-    @include flex-align(baseline){
-        justify-content: center;
-    }
+    @include flexbox(row, center, baseline, unset);
     background-color: $mid-grey;
     padding : 10px;
     &__icon {
@@ -39,21 +37,17 @@
 .website-features {
     padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
     @include desktop-only { 
-      @include padding-desktop;
+        @include padding-desktop;
     }
 }
 
 .features-list {
-    @include flex-lists {
-        align-items: center; 
-    }
+    @include flexbox(column, unset, center, unset);
     @include tablet {
-        @include flex-row-wrap {
-            justify-content: space-around;
-        }
+        @include flexbox(row, space-around, unset, wrap);
     }
     .feature-card {
-        @include flex-align(center);
+        @include flexbox(row, unset, center, unset);
         @include layout-cards;
         background-color: $light-grey;
         height: 72px;
@@ -65,7 +59,8 @@
             width: 40%;
         }
         @include desktop-only {
-            width: 30%;  
+            width: 30%; 
+           
         }
         &:hover {
             &::after {
@@ -106,6 +101,7 @@
         }
         p {
             font-weight: 700;
+            margin: 0 5px;
       }
     }
 }
@@ -121,9 +117,9 @@
 }
 
 .restaurants-list {
-    @include flex-lists;
+    @include flexbox(column, unset, unset, unset);
     @include desktop-only {
-        @include flex-row-wrap 
+        @include flexbox(row, unset, unset, wrap);
     }
 }
 
@@ -153,16 +149,13 @@
         height: 30px;
         width: 80px;
         @include box-shadow(0.2);
-        @include flex-align(center){
-            justify-content: center;
-        }
+        @include flexbox(row, center, center, unset);
         font-size: 0.8em;
         font-weight: 500;
         border-radius: 3px;
     }
     &__info {
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(row, space-between, unset, unset);
         padding: 15px;
     }
     

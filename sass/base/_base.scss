@@ -20,12 +20,10 @@ time, mark, audio, video {
 }
 
 body {	
-	max-width: 1600px;
-	margin: auto;
-	@include flex-align(center){
-		justify-content: center;
-	}
+	@include flexbox(row, center, center, unset);
 }
 
-
+.page-container {
+	width: 100%;
+}
 
