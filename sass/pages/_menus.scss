@@ -8,8 +8,13 @@
     background-color: $light-grey;
     border-radius: 35px 35px 0 0 ;
     margin-top: -50px;
-    width: 100%;
+   // width: 100%;
+   
     position: relative;
+    @include desktop-only { 
+        @include padding-desktop;
+    }
+    
     
   .btn {
       max-width: 185px;
@@ -23,6 +28,9 @@
         justify-content: space-between;
     }
     padding: 25px 25px 15px 18px;
+    @include tablet {
+        justify-content: space-evenly;
+    }
     &__title {
         font-family: 'Shrikhand', cursive;
         font-size: 1.8em;
@@ -30,8 +38,20 @@
     }
 }
 
+.menu-list {
+    
+    @include tablet {
+        @include flex-row-wrap {
+            justify-content: center;
+        }
+    }
+}
+
 .menu-content {
     padding: 0 15px 35px 15px;
+    @include tablet {
+      //  width : 30%; // bug, pas bien centré space around en tablet seulement... si pas mis menu card ne s'agrandi pas, reste à même taille
+    }
     &__heading {
         font-size: 1.1em;
         text-transform: uppercase;
@@ -55,10 +75,30 @@
     justify-content: space-between;
     background-color: #fff;
     padding: 15px;
-  position: relative;
+    position: relative;
+  
     margin: 15px 0;// comment restaurant card info 
+    @include tablet {
+       
+     width: 250px; // min width fait buguer les marges sauf que si pas mis texte coupé, carte trop petites et textes coupés
+      @include desktop-only {
+        width: 350px;
+      }
+        
+    }
+    &__text {
+        h3 {
+            font-size:1em;
+            font-weight: 500;
+        }
+        p {
+            font-size: 0.8em;
+            font-weight : 300;
+        }
+    }
     &__price {
         font-weight: 700;
     }
+    
 }
 

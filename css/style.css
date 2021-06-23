@@ -383,8 +383,13 @@ footer {
   background-color: #f2f2f2;
   border-radius: 35px 35px 0 0;
   margin-top: -50px;
-  width: 100%;
   position: relative;
+}
+@media all and (min-width: 1200px) {
+  .menu {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 .menu .btn {
   max-width: 185px;
@@ -396,10 +401,24 @@ footer {
   justify-content: space-between;
   padding: 25px 25px 15px 18px;
 }
+@media all and (min-width: 750px) {
+  .menu-heading {
+    justify-content: space-evenly;
+  }
+}
 .menu-heading__title {
   font-family: "Shrikhand", cursive;
   font-size: 1.8em;
   letter-spacing: 1px;
+}
+
+@media all and (min-width: 750px) {
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .menu-content {
@@ -430,6 +449,24 @@ footer {
   padding: 15px;
   position: relative;
   margin: 15px 0;
+}
+@media all and (min-width: 750px) {
+  .menu-card {
+    width: 250px;
+  }
+}
+@media all and (min-width: 750px) and (min-width: 1200px) {
+  .menu-card {
+    width: 350px;
+  }
+}
+.menu-card__text h3 {
+  font-size: 1em;
+  font-weight: 500;
+}
+.menu-card__text p {
+  font-size: 0.8em;
+  font-weight: 300;
 }
 .menu-card__price {
   font-weight: 700;
