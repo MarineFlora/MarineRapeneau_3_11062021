@@ -21,8 +21,10 @@ time, mark, audio, video {
 
 body {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
 }
 
 body {
@@ -119,7 +121,10 @@ h4 {
 }*/
 header {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: unset;
+  flex-wrap: unset;
   padding: 22px 0 12px;
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -158,12 +163,17 @@ footer {
   .footer-links {
     display: flex;
     flex-direction: row;
+    justify-content: unset;
+    align-items: unset;
     flex-wrap: wrap;
   }
 }
 .footer-links__element {
   display: flex;
+  flex-direction: row;
+  justify-content: unset;
   align-items: center;
+  flex-wrap: unset;
   padding: 4px 0;
 }
 @media all and (min-width: 750px) {
@@ -187,8 +197,10 @@ footer {
 
 .search-section {
   display: flex;
-  align-items: baseline;
+  flex-direction: row;
   justify-content: center;
+  align-items: baseline;
+  flex-wrap: unset;
   background-color: #e6e6e6;
   padding: 10px;
 }
@@ -233,19 +245,25 @@ footer {
 .features-list {
   display: flex;
   flex-direction: column;
+  justify-content: unset;
   align-items: center;
+  flex-wrap: unset;
 }
 @media all and (min-width: 750px) {
   .features-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: unset;
+    flex-wrap: wrap;
   }
 }
 .features-list .feature-card {
   display: flex;
+  flex-direction: row;
+  justify-content: unset;
   align-items: center;
+  flex-wrap: unset;
   border-radius: 20px;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.1);
   background-color: #f2f2f2;
@@ -319,11 +337,16 @@ footer {
 .restaurants-list {
   display: flex;
   flex-direction: column;
+  justify-content: unset;
+  align-items: unset;
+  flex-wrap: unset;
 }
 @media all and (min-width: 1200px) {
   .restaurants-list {
     display: flex;
     flex-direction: row;
+    justify-content: unset;
+    align-items: unset;
     flex-wrap: wrap;
   }
 }
@@ -359,15 +382,20 @@ footer {
   width: 80px;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
   font-size: 0.8em;
   font-weight: 500;
   border-radius: 3px;
 }
 .restaurants-card__info {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: unset;
+  flex-wrap: unset;
   padding: 15px;
 }
 
@@ -390,7 +418,10 @@ footer {
 }
 .menu__btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: unset;
+  flex-wrap: unset;
   padding: 10px 0 60px 0;
 }
 .menu__btn .btn {
@@ -399,8 +430,10 @@ footer {
 
 .menu-heading {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: unset;
   padding: 25px 25px 15px 18px;
 }
 @media all and (min-width: 750px) {
@@ -418,8 +451,9 @@ footer {
   .menu-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: unset;
+    flex-wrap: wrap;
   }
 }
 
@@ -445,8 +479,10 @@ footer {
   border-radius: 20px;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.1);
   display: flex;
-  align-items: flex-end;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: unset;
   background-color: #fff;
   padding: 15px;
   position: relative;

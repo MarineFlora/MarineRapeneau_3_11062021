@@ -15,8 +15,7 @@
     position: relative;
     
     &__btn {
-        display: flex;
-        justify-content: center;
+        @include flexbox(row, center, unset, unset);
         padding : 10px 0 60px 0;
         .btn {
             width: 195px;
@@ -26,9 +25,7 @@
 }
 
 .menu-heading {
-    @include flex-align(center) {
-        justify-content: space-between;
-    }
+    @include flexbox(row, space-between, baseline, unset);
     padding: 25px 25px 15px 18px;
     @include tablet {
         justify-content: space-evenly;
@@ -43,10 +40,7 @@
 .menu-list {
     
     @include tablet {
-        @include flex-row-wrap {
-            justify-content: center;
-            
-        }
+        @include flexbox(row, center, unset, wrap);
     }
 }
 
@@ -70,9 +64,7 @@
 
 .menu-card { // a amélioer, répétitions
     @include layout-cards;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    @include flexbox(row, space-between, flex-end, unset);
     background-color: #fff;
     padding: 15px;
     position: relative;
