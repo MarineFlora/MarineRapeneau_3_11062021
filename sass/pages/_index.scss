@@ -39,7 +39,7 @@
 .website-features {
     padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
     @include desktop-only { 
-      @include padding-desktop;
+        @include padding-desktop;
     }
 }
 
@@ -65,7 +65,8 @@
             width: 40%;
         }
         @include desktop-only {
-            width: 30%;  
+            width: 30%; 
+           
         }
         &:hover {
             &::after {

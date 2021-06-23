@@ -13,9 +13,6 @@
     border-radius: 35px 35px 0 0 ;
     margin-top: -50px;
     position: relative;
-    @include desktop-only { 
-        @include padding-desktop;
-    }
     
     &__btn {
         display: flex;

@@ -20,8 +20,6 @@ time, mark, audio, video {
 }
 
 body {	
-	max-width: 1600px;
-	margin: auto;
 	@include flex-align(center){
 		justify-content: center;
 	}

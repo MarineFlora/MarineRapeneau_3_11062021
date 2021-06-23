@@ -20,8 +20,6 @@ time, mark, audio, video {
 }
 
 body {
-  max-width: 1600px;
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,8 +144,8 @@ footer {
 }
 @media all and (min-width: 1200px) {
   footer {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -227,8 +225,8 @@ footer {
 }
 @media all and (min-width: 1200px) {
   .website-features {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -313,8 +311,8 @@ footer {
 }
 @media all and (min-width: 1200px) {
   .section-restaurants {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -389,12 +387,6 @@ footer {
   border-radius: 35px 35px 0 0;
   margin-top: -50px;
   position: relative;
-}
-@media all and (min-width: 1200px) {
-  .menu {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
 }
 .menu__btn {
   display: flex;
