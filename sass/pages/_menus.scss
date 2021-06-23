@@ -1,4 +1,103 @@
 .photo-restau {
     width: 100%;
+    height: 260px;
     object-fit: cover;
+    @include desktop-only {
+        height: 400px;
+        
+    }
 }
+
+.menu {
+    background-color: $light-grey;
+    border-radius: 35px 35px 0 0 ;
+    margin-top: -50px;
+    position: relative;
+    @include desktop-only { 
+        @include padding-desktop;
+    }
+    
+    &__btn {
+        display: flex;
+        justify-content: center;
+        padding : 10px 0 60px 0;
+        .btn {
+            width: 195px;
+        }
+    }
+  
+}
+
+.menu-heading {
+    @include flex-align(center) {
+        justify-content: space-between;
+    }
+    padding: 25px 25px 15px 18px;
+    @include tablet {
+        justify-content: space-evenly;
+    }
+    &__title {
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.6em;
+        letter-spacing: 1px;
+    }
+}
+
+.menu-list {
+    
+    @include tablet {
+        @include flex-row-wrap {
+            justify-content: center;
+            
+        }
+    }
+}
+
+.menu-content {
+    padding: 15px;
+    &__heading {
+        font-size: 1.1em;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 5px;
+        margin-left: 5px;
+    }
+    &__bottombar {
+        width: 40px;
+        height: 3px;
+        background-color: $color-tertiary;
+        margin-bottom: 15px;   
+        margin-left: 5px;
+    }
+}
+
+.menu-card { // a amélioer, répétitions
+    @include layout-cards;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px;
+    position: relative;
+    margin: 15px 0;// comment restaurant card info 
+    @include tablet {
+        width: 280px; }
+    @include desktop-only {
+        width: 350px;
+    }
+    &__text {
+        h3 {
+            font-size:1em;
+            font-weight: 500;
+        }
+        p {
+            font-size: 0.9em;
+            font-weight : 300;
+        }
+    }
+    &__price {
+        font-weight: 700;
+    }
+    
+}
+

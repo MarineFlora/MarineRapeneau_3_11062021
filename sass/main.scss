@@ -5,10 +5,11 @@
 @import "./base/base";
 @import "./base/typography";
 
-@import "./components/buttons.scss";
+@import "./components/buttons";
+@import "./components/icon";
 
-@import "./layouts/header.scss";
-@import "./layouts/footer.scss";
+@import "./layouts/header";
+@import "./layouts/footer";
 
 @import "./pages/index";
 @import "./pages/menus";

@@ -8,5 +8,15 @@ header {
     img {
         height: 28px;
     }
+
+    .header__icon {
+        font-size: 1.1em;
+        color: $dark-grey;
+        position: absolute;
+        left: 23px;
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 
