@@ -136,7 +136,7 @@ header .header__icon {
   left: 23px;
 }
 header .header__icon:hover {
-  color: #99E2D0;
+  color: #9356DC;
 }
 
 footer {
@@ -378,6 +378,11 @@ footer {
   height: 260px;
   object-fit: cover;
 }
+@media all and (min-width: 1200px) {
+  .photo-restau {
+    height: 400px;
+  }
+}
 
 .menu {
   background-color: #f2f2f2;
@@ -391,8 +396,13 @@ footer {
     padding-right: 100px;
   }
 }
-.menu .btn {
-  max-width: 185px;
+.menu__btn {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 60px 0;
+}
+.menu__btn .btn {
+  width: 195px;
 }
 
 .menu-heading {
@@ -408,7 +418,7 @@ footer {
 }
 .menu-heading__title {
   font-family: "Shrikhand", cursive;
-  font-size: 1.8em;
+  font-size: 1.6em;
   letter-spacing: 1px;
 }
 
@@ -422,7 +432,7 @@ footer {
 }
 
 .menu-content {
-  padding: 0 15px 35px 15px;
+  padding: 15px;
 }
 .menu-content__heading {
   font-size: 1.1em;
@@ -452,10 +462,10 @@ footer {
 }
 @media all and (min-width: 750px) {
   .menu-card {
-    width: 250px;
+    width: 280px;
   }
 }
-@media all and (min-width: 750px) and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
   .menu-card {
     width: 350px;
   }
@@ -465,7 +475,7 @@ footer {
   font-weight: 500;
 }
 .menu-card__text p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-weight: 300;
 }
 .menu-card__price {
