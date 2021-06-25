@@ -86,35 +86,64 @@
     @include desktop-only {
         width: 350px;
     }
-    
+   
+    &:hover .menu-card__check{
+        width: 60px;
+    }
+    &:hover .menu-card__icon {
+        transform: rotate(1turn);
+        opacity:1;
+    }
+   /* &:hover .menu-card__price {
+        transform: translateX(-50px);
+    }*/
+
+
     &__text {
         
-        
+
+      
         h3 {
-          
             font-size:1em;
             font-weight: 500;
+      
+          overflow:hidden; 
+        text-overflow:ellipsis ;
+        white-space:nowrap;
         }
-        p {
-            
+        p { 
             font-size: 0.9em;
             font-weight : 300;
+        
+          overflow:hidden; 
+        text-overflow:ellipsis ;
+        white-space:nowrap;
         }
     }
     &__price {
         font-weight: 700;
         padding-right: 12px ;
-
+      //  transition: transform 500ms ease; // permet de bouger le prix mais après les "..." ellipsis ne marche pas, prix au dessus...
     }
-   &__check {
+   &__check { 
         position: absolute;
+        transition: width 500ms linear; // j'ai copité.... 
+        transform-origin: right center;
         right:0;
         bottom: 0;
         background-color:$color-tertiary;
-        width: 60px;
-        height:100%;
-       // opacity: 0;
-
+        width: 0;
+        height: 100%;
+        border-radius: 0 $border-radius-cards $border-radius-cards 0;
+        @include flexbox(row, center, center, unset);
+       
+        
+    }
+    &__icon {
+        color: #fff;
+        font-size: 20px;
+        transition: transform 500ms ease;
+        opacity:0;
     }
     
 }
@@ -122,10 +151,8 @@
 @keyframes menu-fadein {
     0%{
         opacity:0;
-        transform: translateY(10px);
+        transform: translateY(30px);
     }
-  
-    
     100% {
         opacity: 1;
     }

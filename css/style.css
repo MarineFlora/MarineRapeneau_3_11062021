@@ -570,6 +570,9 @@ footer {
   position: relative;
   padding: 12px;
   margin: 15px 0;
+  /* &:hover .menu-card__price {
+       transform: translateX(-50px);
+   }*/
 }
 @media all and (min-width: 760px) {
   .menu-card {
@@ -581,13 +584,26 @@ footer {
     width: 350px;
   }
 }
+.menu-card:hover .menu-card__check {
+  width: 60px;
+}
+.menu-card:hover .menu-card__icon {
+  transform: rotate(1turn);
+  opacity: 1;
+}
 .menu-card__text h3 {
   font-size: 1em;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-card__text p {
   font-size: 0.9em;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu-card__price {
   font-weight: 700;
@@ -595,17 +611,31 @@ footer {
 }
 .menu-card__check {
   position: absolute;
+  transition: width 500ms linear;
+  transform-origin: right center;
   right: 0;
   bottom: 0;
   background-color: #99E2D0;
-  width: 60px;
+  width: 0;
   height: 100%;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: unset;
+}
+.menu-card__icon {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 500ms ease;
+  opacity: 0;
 }
 
 @keyframes menu-fadein {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
