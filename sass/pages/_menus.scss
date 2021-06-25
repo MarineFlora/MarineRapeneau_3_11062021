@@ -41,7 +41,7 @@
 }
 
 .menu-list {
-    
+    opacity:1;
     @include tablet {
         @include flexbox(row, center, unset, wrap);
     }
@@ -49,6 +49,13 @@
 
 .menu-content {
     padding: 15px;
+    animation: menu-fadein ease-in-out 800ms forwards; 
+    opacity:0;
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            animation-delay: 400ms * $i;
+        }
+    }
     &__heading {
         font-size: 1.1em;
         text-transform: uppercase;
@@ -92,4 +99,17 @@
     }
     
 }
+
+@keyframes menu-fadein {
+    0%{
+        opacity:0;
+        transform: translateY(10px);
+    }
+  
+    
+    100% {
+        opacity: 1;
+    }
+}
+
 

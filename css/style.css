@@ -138,6 +138,7 @@ h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: unset;
   animation: fadeout 3s forwards;
 }
 .load__food {
@@ -515,6 +516,9 @@ footer {
   letter-spacing: 1px;
 }
 
+.menu-list {
+  opacity: 1;
+}
 @media all and (min-width: 760px) {
   .menu-list {
     display: flex;
@@ -527,6 +531,17 @@ footer {
 
 .menu-content {
   padding: 15px;
+  animation: menu-fadein ease-in-out 800ms forwards;
+  opacity: 0;
+}
+.menu-content--1 {
+  animation-delay: 400ms;
+}
+.menu-content--2 {
+  animation-delay: 800ms;
+}
+.menu-content--3 {
+  animation-delay: 1200ms;
 }
 .menu-content__heading {
   font-size: 1.1em;
@@ -576,6 +591,16 @@ footer {
 }
 .menu-card__price {
   font-weight: 700;
+}
+
+@keyframes menu-fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
