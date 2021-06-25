@@ -93,7 +93,7 @@ h4 {
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.3);
   opacity: 0;
   z-index: -1;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 
 .heart-icon {
@@ -142,7 +142,7 @@ h4 {
 }
 .load__food {
   width: 180px;
-  animation: cloche 1000ms ease-in-out alternate infinite;
+  animation: cloche 1200ms ease-in-out alternate infinite;
   position: relative;
 }
 .load__spinner {
@@ -165,7 +165,7 @@ h4 {
   }
 }
 @keyframes fadeout {
-  75% {
+  80% {
     opacity: 1;
   }
   100% {
@@ -178,7 +178,7 @@ h4 {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
 }
 header {
@@ -363,7 +363,7 @@ footer {
   background-color: #f2eafb;
   opacity: 0;
   z-index: -1;
-  transition: opacity 500ms;
+  transition: opacity 300ms;
 }
 .features-list .feature-card__nbr {
   height: 25px;
