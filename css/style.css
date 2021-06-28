@@ -617,13 +617,13 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: unset;
-  transition: all 500ms ease-in-out;
+  transition: all 400ms ease-in-out;
   transform: translateX(100%);
 }
 .menu-card__icon {
   color: #fff;
   font-size: 20px;
-  transition: all 400ms 100ms ease;
+  transition: all 300ms 100ms ease;
   opacity: 0;
 }
 

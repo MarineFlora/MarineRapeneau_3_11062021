@@ -123,14 +123,14 @@
         height: 100%;
         border-radius: 0 $border-radius-cards $border-radius-cards 0;
         @include flexbox(row, center, center, unset);
-        transition: all 500ms ease-in-out;
+        transition: all 400ms ease-in-out;
         transform: translateX(100%);
         
     }
     &__icon {
         color: #fff;
         font-size: 20px;
-        transition: all 400ms 100ms ease;
+        transition: all 300ms 100ms ease;
         opacity:0;
     }
     
