@@ -70,7 +70,7 @@ h4 {
   height: 50px;
   border-radius: 30px;
   border: none;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
   color: #fff;
   padding: 0 20px;
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@ h4 {
   bottom: 0;
   left: 0;
   border-radius: 30px;
-  background: linear-gradient(170deg, #ff93e1 0%, #a16be0 100%);
+  background: linear-gradient(175deg, #ff93e1 0%, #a16be0 100%);
   box-shadow: 0px 4px 7px 1px rgba(0, 0, 0, 0.3);
   opacity: 0;
   z-index: -1;
@@ -99,31 +99,34 @@ h4 {
 .heart-icon {
   padding: 10px;
   font-size: 1.7em;
+  cursor: pointer;
 }
 
-/* TEST ANIMATIONS */
-/* TEST ANIMATIONS */
-/*
-@keyframes progress-bar {
-    0% {
-        transform: scaleY(0);
-    }
-    15% {
-        transform: scaleY(.7);
-    }
-    30% {
-        transform: scaleY(.28);
-    }
-    50% {
-        transform: scaleY(.63);
-    }
-    85% {
-        opacity:1;
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}*/
+.heart-icon--empty {
+  position: absolute;
+  z-index: 2;
+  color: #333333;
+  opacity: 1;
+  transition: opacity 700ms ease;
+  background: #fff;
+}
+.heart-icon--empty:hover {
+  opacity: 0;
+}
+
+.menu-heading .heart-icon--empty {
+  background: #f2f2f2;
+}
+
+.heart-icon--full {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(45deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .load {
   position: fixed;
   z-index: 2;

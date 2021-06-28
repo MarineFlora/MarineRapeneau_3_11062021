@@ -1,41 +1,35 @@
 .heart-icon { 
     padding: 10px;
     font-size: 1.7em;
+    cursor: pointer;
+}
+
+.heart-icon--empty {
+    position: absolute;
+    z-index:2;
+    color: $dark-grey;
+    opacity:1;
+    transition: opacity 700ms ease;
+    background: #fff;
+    &:hover {
+        opacity:0;
+    }
+}
+
+.menu-heading {
+    .heart-icon--empty {
+        background: $light-grey;
+    }
+
+}
+
+.heart-icon--full {
+    position: relative;
+    z-index:1;
+    background: linear-gradient(45deg, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
-      /* TEST ANIMATIONS */ 
-        //&:hover {
-        //    & > .heart-icon__progress-bar {
-        //        transform: scaleY(1);
-         //       animation-name: progress-bar;
-           // opacity: 0;
-           // animation: progress-bar 1000ms both;
-           
-       // }
-            //transform: perspective(150px) translateZ(60px);
-      //  transition: transform 500ms ease-in-out;
-         /* TEST ANIMATIONS */ 
-       // }
-
-       /*
-@keyframes progress-bar {
-    0% {
-        transform: scaleY(0);
-    }
-    15% {
-        transform: scaleY(.7);
-    }
-    30% {
-        transform: scaleY(.28);
-    }
-    50% {
-        transform: scaleY(.63);
-    }
-    85% {
-        opacity:1;
-    }
-    100% {
-        transform: scaleY(1);
-    }
-}*/
