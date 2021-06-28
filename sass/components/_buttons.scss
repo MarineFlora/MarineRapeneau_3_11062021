@@ -5,10 +5,10 @@
     height: 50px;
     border-radius: 30px;
     border: none;
-    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    background: linear-gradient(175deg, $color-secondary, $color-primary);
     color: #fff;
     padding: 0 20px;
-    @include box-shadow(0.1);
+    @include box-shadow(0.2);
     position: relative;
     cursor: pointer;
     z-index: 1;
@@ -25,7 +25,7 @@
         bottom: 0;
         left: 0;
         border-radius: 30px;
-        background: linear-gradient(170deg, lighten($color-secondary,5) 0%, lighten($color-primary,5) 100%);
+        background: linear-gradient(175deg, lighten($color-secondary,5) 0%, lighten($color-primary,5) 100%);
         @include box-shadow(0.3);
         opacity:0;
         z-index: -1;
