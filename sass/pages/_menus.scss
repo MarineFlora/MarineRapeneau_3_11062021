@@ -41,7 +41,7 @@
 }
 
 .menu-list {
-    
+    opacity:1;
     @include tablet {
         @include flexbox(row, center, unset, wrap);
     }
@@ -49,47 +49,101 @@
 
 .menu-content {
     padding: 15px;
+    animation: menu-fadein ease-in-out 800ms forwards; 
+    opacity:0;
+    @for $i from 1 through 3 {
+        &--#{$i} {
+            animation-delay: 400ms * $i;
+        }
+    }
     &__heading {
         font-size: 1.1em;
         text-transform: uppercase;
         font-weight: 400;
-        margin-bottom: 5px;
-        margin-left: 5px;
+        margin-bottom: 5px; //
+        margin-left: 5px; //
     }
     &__bottombar {
         width: 40px;
         height: 3px;
         background-color: $color-tertiary;
-        margin-bottom: 15px;   
-        margin-left: 5px;
+        margin-bottom: 15px;   //
+        margin-left: 5px; //
     }
 }
 
 .menu-card { // a amélioer, répétitions
     @include layout-cards;
-    @include flexbox(row, space-between, flex-end, unset);
+    @include flexbox(row, flex-start, flex-end, nowrap);
     background-color: #fff;
-    padding: 15px;
-    position: relative;
-    margin: 15px 0;// comment restaurant card info 
+    height: 70px;
+    overflow: hidden;
+    margin: 15px 0;// comme restaurant card info 
     @include tablet {
-        width: 300px; }
-    @include desktop-only {
-        width: 350px;
+        width: 350px; 
     }
+    
+   
+    &:hover .menu-card__check{
+        width: 60px;
+        transform: translateX(0);
+    }
+    &:hover .menu-card__icon {
+        transform: rotate(1turn);
+        opacity:1;
+    }
+  
     &__text {
+        overflow:hidden;  
+        margin: 15px 12px;
+        flex:1;
+      
         h3 {
             font-size:1em;
             font-weight: 500;
+            text-overflow:ellipsis ;
+            overflow:hidden; 
+            white-space:nowrap;
         }
-        p {
+        p { 
             font-size: 0.9em;
             font-weight : 300;
+            text-overflow:ellipsis;
+            overflow:hidden; 
+            white-space:nowrap;
         }
     }
     &__price {
         font-weight: 700;
+        margin: 15px 20px 15px 0;
+    }
+   &__check { 
+        background-color:$color-tertiary;
+        width: 0;
+        height: 100%;
+        border-radius: 0 $border-radius-cards $border-radius-cards 0;
+        @include flexbox(row, center, center, unset);
+        transition: all 400ms ease-in-out;
+        transform: translateX(100%);
+        
+    }
+    &__icon {
+        color: #fff;
+        font-size: 20px;
+        transition: all 300ms 100ms ease;
+        opacity:0;
     }
     
 }
+
+@keyframes menu-fadein {
+    0%{
+        opacity:0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 
