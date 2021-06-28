@@ -74,75 +74,63 @@
 
 .menu-card { // a amélioer, répétitions
     @include layout-cards;
-    @include flexbox(row, space-between, flex-end, unset);
+    @include flexbox(row, flex-start, flex-end, nowrap);
     background-color: #fff;
-    position: relative;
-    padding: 12px;
-    margin: 15px 0;// comment restaurant card info 
+    height: 70px;
+    overflow: hidden;
+    margin: 15px 0;// comme restaurant card info 
     @include tablet {
-        width: 300px; 
-      //  height: 70px;
+        width: 350px; 
     }
-    @include desktop-only {
-        width: 350px;
-    }
+    
    
     &:hover .menu-card__check{
         width: 60px;
+        transform: translateX(0);
     }
     &:hover .menu-card__icon {
         transform: rotate(1turn);
         opacity:1;
     }
-   /* &:hover .menu-card__price {
-        transform: translateX(-50px);
-    }*/
-
-
+  
     &__text {
-        
-
+        overflow:hidden;  
+        margin: 15px 12px;
+        flex:1;
       
         h3 {
             font-size:1em;
             font-weight: 500;
-      
-          overflow:hidden; 
-        text-overflow:ellipsis ;
-        white-space:nowrap;
+            text-overflow:ellipsis ;
+            overflow:hidden; 
+            white-space:nowrap;
         }
         p { 
             font-size: 0.9em;
             font-weight : 300;
-        
-          overflow:hidden; 
-        text-overflow:ellipsis ;
-        white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden; 
+            white-space:nowrap;
         }
     }
     &__price {
         font-weight: 700;
-        padding-right: 12px ;
-      //  transition: transform 500ms ease; // permet de bouger le prix mais après les "..." ellipsis ne marche pas, prix au dessus...
+        margin: 15px 20px 15px 0;
     }
    &__check { 
-        position: absolute;
-        transition: width 500ms linear; // j'ai copité.... 
-        transform-origin: right center;
-        right:0;
-        bottom: 0;
         background-color:$color-tertiary;
         width: 0;
         height: 100%;
         border-radius: 0 $border-radius-cards $border-radius-cards 0;
         @include flexbox(row, center, center, unset);
-       
+        transition: all 500ms ease-in-out;
+        transform: translateX(100%);
         
     }
     &__icon {
         color: #fff;
         font-size: 20px;
-        transition: transform 500ms ease;
+        transition: all 400ms 100ms ease;
         opacity:0;
     }
     
