@@ -20,7 +20,6 @@
     .heart-icon--empty {
         background: $light-grey;
     }
-
 }
 
 .heart-icon--full {
@@ -29,7 +28,7 @@
     background: linear-gradient(45deg, $color-secondary, $color-primary);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: transparent;   
 }
 
 
