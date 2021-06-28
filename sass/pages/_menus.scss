@@ -25,7 +25,7 @@
 }
 
 .menu-heading {
-    @include flexbox(row, space-between, baseline, unset);
+    @include flexbox(row, space-between, flex-start, unset);
     padding: 25px 25px 15px 18px;
     @include tablet {
         justify-content: space-evenly;
@@ -68,7 +68,7 @@
         width: 40px;
         height: 3px;
         background-color: $color-tertiary;
-        margin-bottom: 15px;   //
+        margin-bottom: 15px;   
         margin-left: 5px; //
     }
 }

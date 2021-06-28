@@ -101,23 +101,19 @@ h4 {
   font-size: 1.7em;
   cursor: pointer;
 }
-
 .heart-icon--empty {
   position: absolute;
   z-index: 2;
   color: #333333;
   opacity: 1;
-  transition: opacity 700ms ease;
-  background: #fff;
+  transition: opacity 2s ease-in-out;
 }
 .heart-icon--empty:hover {
   opacity: 0;
 }
-
-.menu-heading .heart-icon--empty {
-  background: #f2f2f2;
+.heart-icon--empty:hover + .heart-icon--full::after {
+  transform: translateY(-100%) rotate(500deg);
 }
-
 .heart-icon--full {
   position: relative;
   z-index: 1;
@@ -125,6 +121,25 @@ h4 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.heart-icon--full::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  height: 200%;
+  width: 200%;
+  background: #fff;
+  border-radius: 25%;
+  transform: translateY(0) rotate(0deg);
+  transition: transform 2.5s ease-out;
+}
+
+.menu-heading .heart-icon--empty, .menu-heading .heart-icon--full::after {
+  background: #f2f2f2;
 }
 
 .load {
@@ -499,7 +514,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: flex-start;
   flex-wrap: unset;
   padding: 25px 25px 15px 18px;
 }

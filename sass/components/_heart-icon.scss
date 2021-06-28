@@ -2,33 +2,55 @@
     padding: 10px;
     font-size: 1.7em;
     cursor: pointer;
-}
 
-.heart-icon--empty {
-    position: absolute;
-    z-index:2;
-    color: $dark-grey;
-    opacity:1;
-    transition: opacity 700ms ease;
-    background: #fff;
-    &:hover {
-        opacity:0;
+    &--empty {
+        position: absolute;
+        z-index:2;
+        color: $dark-grey;
+        opacity:1;
+        transition: opacity 2s ease-in-out;
+        &:hover {
+            opacity:0;
+        }
+    }
+
+    &--empty:hover + &--full::after {
+        transform: translateY(-100%) rotate(500deg);
+    }
+
+    &--full {
+        position: relative;
+        z-index:1;
+        background: linear-gradient(45deg, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;   
+        position : relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            z-index:-1;
+            position: absolute;
+            bottom: -50%;
+            left: -50%;
+            height: 200%;
+            width: 200%;
+            background: #fff;
+            border-radius: 25%;
+            transform: translateY(0) rotate(0deg);
+            transition: transform 2.5s ease-out;
+        }
     }
 }
 
 .menu-heading {
-    .heart-icon--empty {
+    .heart-icon--empty, .heart-icon--full::after  {
         background: $light-grey;
     }
 }
 
-.heart-icon--full {
-    position: relative;
-    z-index:1;
-    background: linear-gradient(45deg, $color-secondary, $color-primary);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;   
-}
+
+
+
 
 
