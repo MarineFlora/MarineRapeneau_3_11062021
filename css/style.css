@@ -455,7 +455,11 @@ footer {
   height: 175px;
   width: 100%;
   object-fit: cover;
+  object-position: 100% 90%;
   border-radius: 20px 20px 0 0;
+}
+.restaurants-card__img:nth-child(2) {
+  object-position: 100% 60%;
 }
 .restaurants-card__new {
   position: absolute;

@@ -137,7 +137,11 @@
         height: 175px;
         width: 100%;
         object-fit: cover;
-        border-radius: $border-radius-cards $border-radius-cards 0 0,
+        object-position: 100% 90%;
+        border-radius: $border-radius-cards $border-radius-cards 0 0;
+    &:nth-child(2) { 
+        object-position: 100% 60%;
+    }
     }
     &__new {
         position: absolute;
