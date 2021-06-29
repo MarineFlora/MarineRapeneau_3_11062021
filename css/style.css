@@ -96,10 +96,14 @@ h4 {
   transition: opacity 300ms;
 }
 
-.heart-icon {
+.heart {
   padding: 10px;
+}
+
+.heart-icon {
   font-size: 1.7em;
   cursor: pointer;
+  transform: scale(0.75, 0.85);
 }
 .heart-icon--empty {
   position: absolute;
@@ -443,7 +447,6 @@ footer {
 }
 @media all and (min-width: 1200px) {
   .restaurants-card {
-    flex: auto;
     flex: 44%;
     margin: 9px;
   }

@@ -26,12 +26,11 @@ footer {
     }
 }
 
-
 .footer__icon {
     font-size: 0.8em;
     padding-right: 12px;
     &--rotate {
-        display:inline-block;
+        display: inline-block;
         transform: rotate(-15deg); 
         font-size: 0.65em;
     } 
