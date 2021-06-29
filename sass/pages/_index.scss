@@ -1,0 +1,168 @@
+// SECTION SEARCH
+.search-section {
+    @include flexbox(row, center, baseline, unset);
+    background-color: $mid-grey;
+    padding : 10px;
+    &__icon {
+        color: $dark-grey;
+        margin-right: 15px;
+    }
+    &__text{
+        background-color: $mid-grey;
+        border: none;
+        font-weight: 700;
+        font-size: 1em;
+        width: 130px;
+        height: 30px;
+        &::placeholder {
+            color: $dark-grey;
+            opacity:1;
+            padding-left: 5px;   
+        }
+    }
+}
+
+// SECTION INTRO
+.website-intro {
+    background-color: $light-grey;
+    padding: 30px 40px;
+    text-align: center;
+    &__text {
+        font-weight: 300;
+        margin: 7px;
+    } 
+}
+
+// SECTION FONCTIONNEMENT
+.website-features {
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+        @include padding-desktop;
+    }
+}
+
+.features-list {
+    @include flexbox(column, unset, center, unset);
+    @include tablet {
+        @include flexbox(row, space-around, unset, wrap);
+    }
+    .feature-card {
+        @include flexbox(row, unset, center, unset);
+        @include layout-cards;
+        background-color: $light-grey;
+        height: 72px;
+        width: 100%;
+        margin: 12px;
+        position: relative;
+        z-index: 1;
+        @include tablet {
+            width: 40%;
+            min-width:320px;
+        }
+        @include desktop-only {
+            width: 30%; 
+        }
+        &:hover {
+            &::after {
+                opacity:1;
+            }
+            .feature-card__icon {
+                color: $color-primary;
+            }
+    }
+        &::after { 
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            @include layout-cards;
+            background-color: lighten($color-primary, 35%);
+            opacity:0;
+            z-index: -1;
+            transition: opacity 300ms; 
+        }  
+        &__nbr{
+            height: 25px;
+            width: 25px;
+            background-color: $color-primary;
+            border-radius: 40px;
+            color: #fff;
+            text-align: center;
+            line-height: 25px;
+            position: absolute;
+            left: -10px;
+            font-size: 0.9em;
+        }
+        &__icon {
+            color: darken($light-grey, 50%);
+            margin: 0 20px 0 35px;  
+        }
+        p {
+            font-weight: 700;
+            margin: 0 5px;
+      }
+    }
+}
+
+
+// SECTION RESTAURANTS
+.section-restaurants {
+    background-color: $light-grey;
+    padding: map-get($padding-feature-restau, vertical) map-get($padding-feature-restau, horizontal);
+    @include desktop-only { 
+        @include padding-desktop;
+    }
+}
+
+.restaurants-list {
+    @include flexbox(column, unset, unset, unset);
+    @include tablet {
+        @include flexbox(row, unset, unset, wrap);
+    }
+}
+
+.restaurants-card {
+    @include layout-cards;
+    background-color: #fff;
+    flex: auto;
+    position: relative;
+    margin: 9px 0;
+    @include tablet { 
+        flex: 44%;
+        margin: 9px;
+    }
+    &__img {
+        height: 175px;
+        width: 100%;
+        object-fit: cover;
+        object-position: 100% 80%;
+        border-radius: $border-radius-cards $border-radius-cards 0 0;
+    &:nth-child(2) { 
+        object-position: 100% 60%;
+    }
+    @include desktop-only {
+        object-position: 100% 65%;
+    }
+    }
+    &__new {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 40%);
+        height: 30px;
+        width: 80px;
+        @include box-shadow(0.2);
+        @include flexbox(row, center, center, unset);
+        font-size: 0.8em;
+        font-weight: 500;
+        border-radius: 3px;
+    }
+    &__info {
+        @include flexbox(row, space-between, unset, unset);
+        padding: 15px;
+    }
+}
+

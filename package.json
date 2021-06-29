@@ -1,0 +1,22 @@
+{
+  "name": "marinerapeneau_3_11062021",
+  "version": "1.0.0",
+  "description": "3ème projet du parcours développeur web d'OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarineFlora/MarineRapeneau_3_11062021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/MarineFlora/MarineRapeneau_3_11062021/issues"
+  },
+  "homepage": "https://github.com/MarineFlora/MarineRapeneau_3_11062021#readme"
+}
