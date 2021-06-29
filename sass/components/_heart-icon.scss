@@ -1,7 +1,11 @@
-.heart-icon { 
+.heart {
     padding: 10px;
+}
+
+.heart-icon { 
     font-size: 1.7em;
     cursor: pointer;
+    transform: scale(0.75, 0.85);
 
     &--empty {
         position: absolute;

@@ -126,11 +126,10 @@
 .restaurants-card {
     @include layout-cards;
     background-color: #fff;
-    flex:auto;
+    flex: auto;
     position: relative;
     margin: 9px 0;
     @include desktop-only { 
-        flex:auto;
         flex: 44%;
         margin: 9px;
     }
@@ -138,7 +137,7 @@
         height: 175px;
         width: 100%;
         object-fit: cover;
-        border-radius: 20px 20px 0 0,
+        border-radius: $border-radius-cards $border-radius-cards 0 0,
     }
     &__new {
         position: absolute;
@@ -158,6 +157,5 @@
         @include flexbox(row, space-between, unset, unset);
         padding: 15px;
     }
-    
 }
 
