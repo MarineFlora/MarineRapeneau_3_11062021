@@ -57,10 +57,10 @@
         z-index: 1;
         @include tablet {
             width: 40%;
+            min-width:320px;
         }
         @include desktop-only {
             width: 30%; 
-           
         }
         &:hover {
             &::after {
@@ -118,7 +118,7 @@
 
 .restaurants-list {
     @include flexbox(column, unset, unset, unset);
-    @include desktop-only {
+    @include tablet {
         @include flexbox(row, unset, unset, wrap);
     }
 }
@@ -129,7 +129,7 @@
     flex: auto;
     position: relative;
     margin: 9px 0;
-    @include desktop-only { 
+    @include tablet { 
         flex: 44%;
         margin: 9px;
     }
@@ -137,7 +137,14 @@
         height: 175px;
         width: 100%;
         object-fit: cover;
-        border-radius: $border-radius-cards $border-radius-cards 0 0,
+        object-position: 100% 80%;
+        border-radius: $border-radius-cards $border-radius-cards 0 0;
+    &:nth-child(2) { 
+        object-position: 100% 60%;
+    }
+    @include desktop-only {
+        object-position: 100% 65%;
+    }
     }
     &__new {
         position: absolute;
