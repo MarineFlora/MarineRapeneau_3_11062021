@@ -26,7 +26,7 @@
         position: relative;
         z-index:1;
         background: linear-gradient(45deg, $color-secondary, $color-primary);
-       // -webkit-background-clip: text;
+        -webkit-background-clip: text;
         background-clip: text;
         color: transparent;   
         position : relative;
