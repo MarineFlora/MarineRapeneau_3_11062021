@@ -7,7 +7,7 @@ But : Réaliser un site mobile first répertoriant les menus de 4 restaurants ga
 
 - Intégrer la maquette mobile en HTML et CSS, mise en page libre sur tablette et desktop
 - Utiliser animations CSS et SASS<br/>
-Status : debut
+Status : fini
 
 ## Technologies
 * HTML5
