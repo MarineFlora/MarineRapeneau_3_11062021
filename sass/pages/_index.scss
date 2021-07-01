@@ -46,6 +46,7 @@
     @include tablet {
         @include flexbox(row, space-around, unset, wrap);
     }
+}
     .feature-card {
         @include flexbox(row, unset, center, unset);
         @include layout-cards;
@@ -66,7 +67,7 @@
             &::after {
                 opacity:1;
             }
-            .feature-card__icon {
+            .feature-card__icon{
                 color: $color-primary;
             }
     }
@@ -97,14 +98,15 @@
         }
         &__icon {
             color: darken($light-grey, 50%);
-            margin: 0 20px 0 35px;  
+            margin: 0 20px 0 35px;   
+            transition: color 300ms;         
         }
         p {
             font-weight: 700;
             margin: 0 5px;
       }
     }
-}
+
 
 
 // SECTION RESTAURANTS
