@@ -9,12 +9,15 @@ header {
     }
 
     .header__icon {
-        font-size: 1.1em;
+        font-size: 1.2em;
         color: $dark-grey;
         position: absolute;
         left: 23px;
         &:hover {
             color: $color-primary;
+        }
+        @include desktop-only {
+            left: 10%;
         }
     }
 }

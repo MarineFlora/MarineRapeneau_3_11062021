@@ -97,18 +97,18 @@
         overflow:hidden;  
         margin: 15px 12px;
         flex:1;
-      
-        h3 {
-            font-size:1em;
-            font-weight: 500;
-            @include text-overflow;
-        }
-        p { 
-            font-size: 0.9em;
-            font-weight : 300;
-            @include text-overflow;
-        }
+    }  
+    &__title {
+        font-size:1em;
+        font-weight: 500;
+        @include text-overflow;
     }
+    &__subtitle { 
+        font-size: 0.9em;
+        font-weight : 300;
+        @include text-overflow;
+    }
+    
     &__price {
         font-weight: 700;
         margin: 15px 20px 15px 0;
