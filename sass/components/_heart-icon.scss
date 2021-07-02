@@ -13,12 +13,12 @@
         color: $dark-grey;
         opacity:1;
         transition: opacity 1s ease-in-out;
-        &:hover {
+        &:active, &:hover {
             opacity:0;
         }
     }
 
-    &--empty:hover + &--full::after {
+    &--empty:active + &--full::after, &--empty:hover + &--full::after {
         transform: translateY(-100%) rotate(500deg);
     }
 
