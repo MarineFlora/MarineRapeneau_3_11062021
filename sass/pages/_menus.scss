@@ -84,11 +84,11 @@
         width: 350px; 
     }
     
-    &:hover .menu-card__check{
+    &:active .menu-card__check, &:hover .menu-card__check{
         width: 60px;
         transform: translateX(0);
     }
-    &:hover .menu-card__icon {
+    &:active .menu-card__icon,  &:hover .menu-card__icon {
         transform: rotate(1turn);
         opacity:1;
     }
