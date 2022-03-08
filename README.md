@@ -7,6 +7,14 @@ But : Réaliser un site mobile first répertoriant les menus de 4 restaurants ga
 
 - Intégrer la maquette mobile en HTML et CSS, mise en page libre sur tablette et desktop
 - Utiliser animations CSS et SASS<br/>
+
+Compétences développées :   
+➡ Assurer la cohérence graphique d'un site web   
+➡ Utiliser un système de gestion de versions pour le suivi du projet et son hébergement   
+➡ Mettre en œuvre des effets CSS graphiques avancés   
+➡ Mettre en place son environnement Front-End   
+➡ Mettre en place une structure de navigation pour un site web   
+
 Status : fini
 
 ## Technologies
