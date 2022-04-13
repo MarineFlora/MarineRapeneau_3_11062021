@@ -24,3 +24,7 @@ https://marineflora.github.io/MarineRapeneau_3_11062021/
 * HTML5
 * CSS3
 * SASS
+
+## Maquettes mobiles fournies
+![maquesttesp3-750](https://user-images.githubusercontent.com/79592886/163222689-8f0b0685-9145-4701-893e-3e7c2d95b3d8.png)
+
